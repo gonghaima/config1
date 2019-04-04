@@ -236,6 +236,7 @@ alias gs='git status'
 alias gss='git status -s'
 alias gst='git stash'
 alias gsa='git stash apply'
+alias gsk='git add . && git stash save --keep-index'
 alias gso='git checkout stash@{0} -- '  #apply one file from stash - filename as a param
 alias gl='git log'
 alias gll='git lg'
