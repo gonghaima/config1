@@ -9,8 +9,8 @@ alias pr='. ~/.bash_profile'
 alias bs="code ~/.bash_profile"
 alias bp="code ~/.bash_profile"
 alias t='npm test'
-alias ns='npm start'
-alias ys='yarn start'
+alias s='npm start'
+alias y='yarn start'
 #kill port
 alias p='npx kill-port '
 #alias name=value
