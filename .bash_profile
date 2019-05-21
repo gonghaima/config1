@@ -4,10 +4,13 @@
 #  format  #
 ############
 # refresh profile
+alias .='code .'
 alias pr='. ~/.bash_profile'
 alias bs="code ~/.bash_profile"
 alias bp="code ~/.bash_profile"
 alias t='npm test'
+alias ns='npm start'
+alias ys='yarn start'
 #kill port
 alias p='npx kill-port '
 #alias name=value
@@ -47,6 +50,7 @@ alias wl='wc -l'    #统计行数
 alias c="clear"   #清屏
 alias cls="clear"   #清屏
 
+alias h='pwd|pbcopy' # copy current path to clickboard
 alias cp='cp -v'
 alias cpr='cp -r'
 alias mv='mv -v'
@@ -220,7 +224,9 @@ alias ge='git config user.email'
 
 alias gb='git branch'
 alias gba='git branch -a'
+alias gbr='git remote rm origin'
 alias gbru='git remote prune origin'
+alias gro='git remote show origin'
 alias gbd='git branch -D'
 alias gc='git commit -m'
 alias gcl='git clone'
@@ -241,7 +247,6 @@ alias gso='git checkout stash@{0} -- '  #apply one file from stash - filename as
 alias gl='git log'
 alias gll='git lg'
 alias gull='git pull origin'
-alias gro='git remote show origin'
 alias gp='git pull'
 alias gps='git push'
 alias gush='git push origin'
