@@ -1,11 +1,12 @@
+
 # author: wklken
 
 ############
 #  format  #
 ############
 # refresh profile
-alias .='code .'
 alias pr='. ~/.bash_profile'
+alias e='code .'
 alias bs="code ~/.bash_profile"
 alias bp="code ~/.bash_profile"
 alias t='npm test'
@@ -216,6 +217,16 @@ alias pypro='python -m profiling profile'
 alias pt='ptpython'
 
 # Git shortcuts
+gcp(){
+    ga
+    gc "$@"
+    gps
+}
+gac(){
+    ga
+    gc "$@"
+}
+alias gi='git init'
 alias ga='git add .'
 
 alias gg='git config user.email "gonghaima@hotmail.com"'
@@ -224,15 +235,15 @@ alias ge='git config user.email'
 
 alias gb='git branch'
 alias gba='git branch -a'
-alias gbr='git remote rm origin'
-alias gbru='git remote prune origin'
 alias gro='git remote show origin'
+alias grs="git remote set-url origin"
 alias gbd='git branch -D'
+alias gbdr='git push origin --delete'
 alias gc='git commit -m'
 alias gcl='git clone'
 alias gcd='git clean -fd'
 alias gco='git checkout'
-alias gcp='git cherry-pick'
+# alias gcp='git cherry-pick'
 alias gclean='git fetch --prune'
 alias gd='git diff'
 alias gdi='git di'
@@ -244,6 +255,7 @@ alias gst='git stash'
 alias gsa='git stash apply'
 alias gsk='git add . && git stash save --keep-index'
 alias gso='git checkout stash@{0} -- '  #apply one file from stash - filename as a param
+alias gs1='git stash push '  #stash one file - filename as a param
 alias gl='git log'
 alias gll='git lg'
 alias gull='git pull origin'
@@ -256,7 +268,9 @@ alias gtd='git checkout develop'
 alias gm='git merge --no-ff'
 alias gd1='echo "git diff HEAD"; git diff HEAD'
 alias gd2='echo "git diff HEAD^"; git diff HEAD^'
+alias gd3='echo "git diff HEAD^1"; git diff HEAD^1'
 alias gcc='git clean cache -f'
+alias gf='git fetch'
 #alias gsa='git submodule add'
 #alias gsu='git submodule update --init'
 #alias gup='git fetch && git rebase'
