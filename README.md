@@ -3,6 +3,11 @@ My Linux config files
 
 ## launch.json added for vsCode debugging
 
+## node debugger script
+```javascript
+"local-debug": "npm run gen-version; node --inspect=0.0.0.0:3500 -r dotenv/config ./index.js"
+```
+
 
 ## zshrc
 
