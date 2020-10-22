@@ -11,6 +11,8 @@ alias bs="code ~/.bash_profile"
 alias bp="code ~/.bash_profile"
 alias t='npm test'
 alias s='npm start'
+alias r='npm run'
+alias i='npm install'
 alias y='yarn start'
 #kill port
 alias p='npx kill-port '
@@ -23,12 +25,13 @@ alias p='npx kill-port '
 
 alias tm="cd /Users/stevengong/temp"
 alias wk="cd /Users/stevengong/work/Github"
+alias sw="cd /Users/stevengong/work/Swiss"
 alias sd="cd /Users/stevengong/study"
 alias n="open -a Terminal `pwd`"
 function k () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 alias d="rm -rf $1"
 alias o="open ."
-# life query
+# life queryg
 alias op="open `pwd`"
 alias tq="curl wttr.in/shenzhen"
 
@@ -226,17 +229,23 @@ gac(){
     ga
     gc "$@"
 }
+
 alias gi='git init'
 alias ga='git add .'
 
 alias gg='git config user.email "gonghaima@hotmail.com"'
-alias gw='git config user.email "hgong@woolworths.com.au"'
+alias gw='git config --global user.email "hgong@woolworths.com.au"'
+alias gwg='git config --global user.email "gonghaima@hotmail.com"'
+alias gs='git config --global user.email "hai_gong@swissre.com"'
 alias ge='git config user.email'
 
+alias gh="open \`git remote -v | grep git@github.com | grep fetch | head -1 | cut -f2 | cut -d' ' -f1 | sed -e's/:/\//' -e 's/git@/http:\/\//'\`"
 alias gb='git branch'
 alias gba='git branch -a'
 alias gro='git remote show origin'
+# https://gonghaima@github.com/gonghaima/chart.git
 alias grs="git remote set-url origin"
+alias gra="git remote add origin"
 alias gbd='git branch -D'
 alias gbdr='git push origin --delete'
 alias gc='git commit -m'
@@ -249,7 +258,7 @@ alias gd='git diff'
 alias gdi='git di'
 alias gr='git rm'
 alias grh='git reset --hard'
-alias gs='git status'
+# alias gs='git status'
 alias gss='git status -s'
 alias gst='git stash'
 alias gsa='git stash apply'
