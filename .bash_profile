@@ -1,3 +1,7 @@
+# Add Homebrew's executable directory to the front of the PATH
+export PATH=/usr/local/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
 
 # author: wklken
 
@@ -259,7 +263,7 @@ alias gdi='git di'
 alias gr='git rm'
 alias grh='git reset --hard'
 # alias gs='git status'
-alias gss='git status -s'
+alias gss='git stash save ' # git stash save doing crazy things
 alias gst='git stash'
 alias gsa='git stash apply'
 alias gsk='git add . && git stash save --keep-index'
@@ -293,3 +297,9 @@ alias gf='git fetch'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/stevegong/Downloads/google-cloud-sdk/path.bash.inc' ]; then . '/Users/stevegong/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/stevegong/Downloads/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/stevegong/Downloads/google-cloud-sdk/completion.bash.inc'; fi
