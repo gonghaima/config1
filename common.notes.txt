@@ -1,0 +1,6 @@
+Jest test
+
+npm run test::unit projects/sourcing-contracts/CE/distributions/distributions.test.js
+npm run test::unit projects/common/list.test.js
+
+"test::unit": "jest --config jest.unit.json --coverage --collectCoverageFrom=projects/sourcing-contracts/CE/distributions/distributions.ts",
