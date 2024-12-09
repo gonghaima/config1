@@ -284,6 +284,8 @@ alias gd2='echo "git diff HEAD^"; git diff HEAD^'
 alias gd3='echo "git diff HEAD^1"; git diff HEAD^1'
 alias gcc='git clean cache -f'
 alias gf='git fetch'
+# To untrack a file, after adding it to .gitignore
+alias gau='git update-index --assume-unchanged'
 #alias gsa='git submodule add'
 #alias gsu='git submodule update --init'
 #alias gup='git fetch && git rebase'
