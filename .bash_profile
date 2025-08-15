@@ -128,6 +128,24 @@ alias ports='netstat -tulanp'
 alias myip='curl ifconfig.me'
 
 # useful functions
+d() {
+    if [ -z "$1" ]; then
+        echo "Usage: d <file_or_directory>"
+        return 1
+    fi
+
+    read -p "Are you sure you want to delete '$1'? (y/N) " confirm
+    case "$confirm" in
+        [yY]|[yY][eE][sS])
+            rm -rf "$1"
+            echo "'$1' deleted."
+            ;;
+        *)
+            echo "Cancelled."
+            ;;
+    esac
+}
+
 
 #根据文件类型解压
 #extract(){
